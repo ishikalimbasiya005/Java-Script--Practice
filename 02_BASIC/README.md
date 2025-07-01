@@ -57,10 +57,10 @@ This document includes short notes and examples of important JavaScript concepts
 
 ---
 ## Other Program included :
-## 👑 Singleton Pattern
+## Singleton Pattern
 ## Symbols
 ## Objects :
-  - 1. Object Literal
+  - 1.  Object Literal
     2.  Object Constructor
     3.  Array of Objects
     4.  Object Destructuring etc.
