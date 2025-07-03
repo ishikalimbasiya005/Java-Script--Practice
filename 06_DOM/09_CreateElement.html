@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Create element</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const div = document.createElement("div");
+        console.log(div);
+
+        // Print in console screen :--
+        div.className = "mydiv";
+        div.id = "myid";
+        div.style.color = "pink";
+        div.style.backgroundColor = "green";
+        div.style.padding = "10px";
+
+        // Create and append text node [print in body] :--
+        const value = document.createTextNode("Hello ji");
+        div.appendChild(value); 
+        document.body.appendChild(div); 
+
+
+
+    </script>
+</body>
+
+</html>

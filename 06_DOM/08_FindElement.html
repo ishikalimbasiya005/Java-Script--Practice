@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Find Element</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Sunday</div>
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent')
+        // console.log(parent);             //Show parent class
+        // console.log(parent.children);    //Show all the children
+
+        // console.log(parent.children[1]);            //Show Who is first child
+        // console.log(parent.children[1].innerHTML);  //Show only name for first child
+
+        // Show All the Value :--
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML);
+        // }
+        
+        // Style in element :--
+        parent.children[1].style.color = "pink"
+        parent.children[1].style.padding = "10px"
+
+        // Find The specific element :--
+        // console.log(parent.firstElementChild);
+        // console.log(parent.lastElementChild.innerHTML);
+
+
+        // Use QuerySelector and find value :--
+        const mychild = document.querySelector('.child')
+        // console.log(mychild);  // Show first value
+
+         // Find Next Sibling :--
+        // console.log(mychild.nextElementSibling);
+
+        // Find Parent :--
+        // console.log(mychild.parentElement);
+
+        // find Child Node tree Structure :-----------
+        console.log("Node:" , parent.childNodes );
+        // OUTPUT :-- Node : 11
+        // beacuse , value define 5 but after the all value one line brack So,
+        //  "childNodes" this line brack also count.
+                    // 0: #text "\n        "​
+                    // 1: <div class="child">​
+                    // 2: #text "\n        "​
+                    // 3: <div class="child" style="color: pink; padding: 10px;">​
+                    // 4: #text "\n        "​
+                    // 5: <div class="child">​
+                    // 6: #text "\n        "​
+                    // 7: <div class="child">​
+                    // 8: #text "\n        "​
+                    // 9: <div class="child">​
+                    // 10: #text "\n    "​
+                    // length: 11
+    </script>
+</body>
+</html>

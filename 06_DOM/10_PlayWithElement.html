@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list">
+        <li>Car</li>
+    </ul>
+
+    <script>
+        // ++++++++++++++++++++ Add Elements ++++++++++++++++++++
+
+        // This is not a good way to add elements to the DOM.
+        function add(myli) {
+            const li = document.createElement('li');
+            li.innerHTML = `${myli}`;
+            document.querySelector('.list').appendChild(li);
+        }
+        add('Bike');
+        add('Bus');
+        add('Train');
+        add('Plane');
+
+
+        //   It is a good way to add elements to the DOM.
+        function myadd(lis) {
+            const myli = document.createElement('li');
+            myli.appendChild(document.createTextNode(lis));
+            document.querySelector('.list').appendChild(myli);
+        }
+        myadd('Ship');
+
+
+        // +++++++++++++++++++++++ Edit Elements +++++++++++++++++++++++
+        // +++++++ 1st way +++++ [Not recommended]
+        const editlist = document.querySelector('li:nth-child(3)');
+        editlist.innerHTML = 'Car'; 
+
+        //   +++++ 2nd way +++++
+        const edit1 = document.querySelector('li:nth-child(3)');
+        const edit = document.createElement('li');
+        edit.textContent = "My Bus";
+        edit1.replaceWith(edit);
+
+        //  +++++ 3rd way +++++
+        const edit2 = document.querySelector('li:first-child');
+        edit2.outerHTML = "<li>My Car</li>";
+
+
+        // +++++++++++++++++++++ Remove Elements +++++++++++++++++++++
+        const myremove = document.querySelector("li:last-child");
+        myremove.remove();
+    </script>
+</body>
+
+</html>
