@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT SET - 1</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        #Purple {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            margin-left: 400px;
+            background-color: purple;
+            border: 2px solid black;
+        }
+
+        #Orange {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+
+        #Green {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: green;
+            border: 2px solid black;
+        }
+
+        #Blue {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: blue;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Scheme Switcher :</h1>
+    <hr>
+    <span class="button" id="Purple"></span>
+    <span class="button" id="Orange"></span>
+    <span class="button" id="Green"></span>
+    <span class="button" id="Blue"></span>
+
+    <h2>Try Clicking on one of the colors above to change the background color of this page!</h2>
+
+    <script>
+        const boxes = document.querySelectorAll('.button');
+        const body = document.querySelector('body');
+
+        boxes.forEach(function (box) {
+            console.log(box);
+            box.addEventListener('click', function (e) {
+                // console.log(e.target);
+                switch (e.target.id) {
+                    case 'Purple':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+                    case 'Orange':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+                    case 'Green':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+                    case 'Blue':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+
+                    default:
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

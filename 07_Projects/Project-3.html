@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project set-3</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        h1{
+            text-align: center;
+        }
+        #heading{
+            margin-top: 100px;
+            text-align: center;
+           border: 1px dotted black;
+           background-color: lightblue;
+        }
+        #time{
+            width: 200px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: lightcoral;
+            text-align: center;
+            margin-left: 120px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 10px;
+            box-shadow: 10px 10px 5px rgb(202, 87, 87);
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital clock :</h1><hr>
+    <h4 id="heading">Your Local Time :</h4>
+    <div id="time"></div>
+
+    <script>
+        setInterval(function(){
+            let date = new Date();
+            time.innerHTML = date.toLocaleTimeString();
+        } , 1000);
+    </script>
+</body>
+</html>
