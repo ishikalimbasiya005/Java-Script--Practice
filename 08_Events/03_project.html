@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Program</title>
+    <style>
+        body {
+            background-color: #414141;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin: 10px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Gods Images :</h2>
+    <h3>You Click Below Img So , img is removed.</h3>
+    <hr>
+    <ul id="Images">
+        <li><img src="Images/hanuman-one-central-character-indian-600nw-1338365141.webp" alt="HanumanJi" id="HanumanJi">
+        </li>
+        <li><img src="Images/istockphoto-1307831372-612x612.jpg" alt="GaneshJi" id="GaneshJi"></li>
+        <li><img src="Images/8dc8432e052e60e897b751b322cdf956.jpg" alt="Ramsita" id="Ramsita"></li>
+        <li><img src="Images/360_F_515638234_Leo0UBEay0ozXWnObkkxLRNJXM9xhdWG.jpg" alt="RadheKrishna" id="RadheKrishna">
+        </li>
+        <li><img src="Images/92a456153f7fbc1de882876fa5d67ae4.jpg" alt="ShivParvati" id="ShivParvati"></li>
+    </ul>
+
+    <h3>Removed IMG Name :-</h3>
+    <h3 id="text"></h3>
+    
+    <script>
+        document.getElementById('Images').addEventListener('click' , function (e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === "IMG"){
+                const text = document.getElementById('text');
+                text.innerHTML = (e.target.id);
+                let removeIt = e.target.parentNode;
+                removeIt.remove()
+            }            
+        })
+       
+    </script>
+</body>
+</html>

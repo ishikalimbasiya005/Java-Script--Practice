@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Java-Script</title>
+    <style>
+        body {
+            background-color: #414141;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin: 10px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Gods Images :</h2>
+    <hr>
+    <ul id="Images">
+        <li><img src="Images/hanuman-one-central-character-indian-600nw-1338365141.webp" alt="HanumanJi" id="HanumanJi">
+        </li>
+        <li><img src="Images/istockphoto-1307831372-612x612.jpg" alt="GaneshJi" id="GaneshJi"></li>
+        <li><img src="Images/8dc8432e052e60e897b751b322cdf956.jpg" alt="Ramsita" id="Ramsita"></li>
+        <li><img src="Images/360_F_515638234_Leo0UBEay0ozXWnObkkxLRNJXM9xhdWG.jpg" alt="RadheKrishna" id="RadheKrishna">
+        </li>
+        <li><img src="Images/92a456153f7fbc1de882876fa5d67ae4.jpg" alt="ShivParvati" id="ShivParvati"></li>
+    </ul>
+
+    <script>
+        // ++++++++++++++++++++++++    OnClick Event :--  ++++++++++++++++++++++++++++++++
+        document.getElementById("HanumanJi").addEventListener("click", function (e) {
+            alert("This is Hanuman Ji, the God of strength and devotion.");
+
+            // console.log(e) ; 
+            // OR
+            // console.log(e.type);
+        }, false); // 2 value available : defult is false and second is true.
+
+
+
+        // +++++++++++++++  Another Propertys of Event Object :--  +++++++++++++++++++++++++++++++++++++
+        
+        //1.) type :--    click , mouseup, keyboard etc..
+
+        //2.) timeStamp :-  gives the time (in milliseconds) when the event was created.
+
+        //3.) DefaultPrevented :-- stop the browser's normal action that happens when an event occurs.
+
+        //4.) target :--  the specific object or element that is being acted upon.
+        //5.) currentTarget :--  the element to which the event handler is attached.
+                        // E.X :- <span id="hello"> <p> Hello </p> </span>"
+                                    // OUTPUT:----------
+                                    // target : <p>
+                                    // currentTarget : <span>
+
+        //6.) SrcElement :-- The original element that fired the event.used in older versions of IE.In modern browsers, use "event.target" instead.
+
+        //7.) toelement :-- (USE - mouseEvent :mouseover , mouseout)toElement refers to the element that the mouse pointer is moving to when leaving the current element.
+
+        //8.) clientX :-- The horizontal (X-axis) coordinate of the mouse pointer from the left edge of the visible browser window.
+        //9.) clientY :-- The vertical (Y-axis) coordinate of the mouse pointer from the top edge of the visible browser window.
+
+        //10.) screenX :-- The horizontal (X-axis) coordinate of the mouse pointer from the left edge of the screen.
+        //11.) screenY :-- The vertical (Y-axis) coordinate of the mouse pointer from the top edge of the screen.
+                        // [NOTE :-- Both are Same client and Screen events]
+
+        //12.) altKey :-- (USE - keyboardEvent : keydown) true means the Alt key was pressed ,false means the Alt key was not pressed.
+        //13.) ctrlKey :-- (USE - keyboardEvent : keydown) true means the Ctrl key was pressed ,false means the Ctrl key was not pressed.
+        //14.) shiftKey :-- (USE - keyboardEvent : keydown) true means the Shift key was pressed ,false means the Shift key was not pressed.
+        //15.) key or Code :-- (USE - keyboardEvent : keydown) The numeric code of the key that was pressed.
+
+    </script>
+
+</body>
+
+</html>
