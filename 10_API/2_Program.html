@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA-SCRIPT</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(237, 24, 166);
+        }
+
+        #photo {
+            text-align: center;
+            background-color: violet;
+        }
+
+        #name {
+            text-align: center;
+            background-color: violet;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+
+        #card {
+            height: 300px;
+            width: 500px;
+            margin: 0 auto;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: violet;
+        }
+
+        #button {
+            margin-left: 600px;
+            margin-right: 500px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>XMLHttpRequest: readyState property</h1>
+
+    <h2>Example</h2>
+
+    <h5>When You Click This Below Button Then, Show Some Data :</h5>
+    <div id="card">
+        <h4 id="photo"></h4>
+        <h4 id="name"></h4>
+    </div>
+    <button id="button">Click Me!</button>
+
+
+
+    <script>
+
+        // Print data in console log using XMLHttpRequest :---------------------------------
+        const mylink = "https://api.github.com/users/ishikalimbasiya005"; // link to fetch data from github API
+        const xml = new XMLHttpRequest();
+        // xml.open('GET', mylink);
+        // xml.onreadystatechange = function() { 
+        //     console.log(xml.readyState);
+        //     if(xml.readyState === 4){
+        //         const data = JSON.parse(this.responseText) // convert data string to object using : JSON.parse()
+        //         console.log(typeof data);
+        //         console.log(data.id);
+        //     }
+        // }
+        // xml.send();
+
+
+        // Print Photo and Name using XMLHttpRequest :---------------------------------
+        document.getElementById("button").addEventListener("click", function () {
+            xml.open('GET', mylink);
+            xml.onreadystatechange = function () {
+                console.log(xml.readyState);
+                const url = "https://avatars.githubusercontent.com/u/190385379?v=4"
+                document.getElementById("photo").innerHTML = `<img src="${url}" alt="GitHub User Photo" width="200px" height="200px">`;
+
+                const datas = JSON.parse(this.responseText); // convert data string to object using : JSON.parse()
+                document.getElementById("name").innerHTML = `<h3>${datas.name}</h3>`;
+            }
+            xml.send();
+        });
+    </script>
+
+</body>
+
+</html>
