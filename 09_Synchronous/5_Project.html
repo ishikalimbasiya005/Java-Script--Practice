@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 50px;
+            color: brown;
+            background-color: lightsalmon;
+        }
+
+        table {
+            margin: 0 auto;
+            font-size: 20px;
+            background-color: lightcyan;
+        }
+
+        th {
+            text-align: center;
+            font-weight: 200;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Press The Key And Watch Magic :</h1>
+    <div id="insert"></div>
+
+    <script>
+        const magic = document.getElementById('insert');
+        window.addEventListener('keydown', (e) => {
+            magic.innerHTML = `
+           <div class = "color">
+              <table border="2" cellpadding="10" cellspacing="0">
+                 <tr>
+                    <th>Key</th>
+                    <td>keyCode</td>
+                    <td>Code</td>
+                 </tr>
+                 
+                 <tr>
+                    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                    <td>${e.keyCode}</td>
+                     <td>${e.code}</td>
+                 </tr>
+                </table>
+              </div>
+            `
+        });
+    </script>
+</body>
+
+</html>

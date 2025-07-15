@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-color Changer</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+            background-color: aquamarine;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(39, 81, 13);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(82, 82, 217);
+            transition: 0.3s;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Start should change the background-color every second</h1>
+    <hr>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // Function to generate a random hex color
+        const rendomcolor = function () {
+            const hex = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to change the background color
+        let stopInterval;
+
+
+        // when you click start button Program is run :---------
+        document.querySelector('#start').addEventListener('click', function () {
+            if (!stopInterval) {
+                stopInterval = setInterval(() => {
+                    document.body.style.backgroundColor = rendomcolor();
+                }, 1000);
+            }
+        });
+
+        
+        // when you click stop button Program is stop :---------
+        document.querySelector('#stop').addEventListener('click', function () {
+            clearInterval(stopInterval);
+            stopInterval = null; // Reset the interval variable
+        });
+
+    </script>
+</body>
+
+</html>

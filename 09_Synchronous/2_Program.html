@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync Program </title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #stop {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Namaste! Good Morning.</h1>
+    <hr>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        // First way to run Synchronous Code [After 2 second automatically run this code in console screen ]:----------------
+        // setTimeout(() => {
+        //     console.log("Hello , Good morning!");  
+        // },2000);
+
+
+        // Second way to run Synchronous Code in console screen:--------------
+        const sayhello = function () {
+            console.log("Hello , Good morning!");
+        }
+        setTimeout(sayhello, 2000);
+
+
+        // Change the text H1:-------------------
+        // document.querySelector("h1").innerHTML = "Welcome to the JavaScript World!";
+
+        
+        // Change the text H1 after 2 seconds:---------------
+        const changetext = function () {
+            document.querySelector("h1").innerHTML = "Welcome to the JavaScript World!";
+        }
+
+        // Stop the setTimeout:---------------------
+        // NOTE :-- when you click on the button, it will stop the H1 text change.
+        const changeme = setTimeout(changetext, 4000);
+
+        document.querySelector("#stop").addEventListener("click", function () {
+            clearTimeout(changeme);
+            console.log("Timeout is cleared!");
+        })
+
+    </script>
+</body>
+
+</html>
