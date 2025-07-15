@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun with js</title>
+
+</head>
+
+<body style="background-color: #313131;">
+    <script>
+        //  Lexical Scope + closure Example :----------------------------------
+        function init() {
+            var name = "ishika";
+            function displayname() {
+                console.log(name);
+            }
+            return displayname;
+        }
+        const names = init();
+        names(); // Output: ishika
+
+
+        // Lexicle Function Example :-----------------------------------
+        // function outer() {
+        //     let username = "ishika";
+        //     function inner(){
+        //         console.log("inner : ",username); //This inner is Run
+        //     }
+        //     inner()
+        // }
+        // outer()
+        // console.log("TOO OUTER : ",username); // This outer is not Run beacause username is not defined in this scope
+
+    </script>
+
+    <button id="orange">Orange</button>
+    <button id="pink">Pink</button>
+    <button id="green">Green</button>
+    <script>
+
+        // First Way :------------------------------
+        // document.getElementById("orange").addEventListener("click", function(){
+        //     document.body.style.backgroundColor = "orange";
+        // })
+        // document.getElementById("pink").addEventListener("click", function(){
+        //     document.body.style.backgroundColor = "pink";
+        // })
+
+
+        // Second way :-----------------------------------
+        function clickHandler(color) {
+            return function () {
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+        document.getElementById("orange").addEventListener("click", clickHandler("orange"))
+        document.getElementById("pink").addEventListener("click", clickHandler("pink"))
+        document.getElementById("green").addEventListener("click", clickHandler("green"))
+    </script>
+</body>
+
+</html>
