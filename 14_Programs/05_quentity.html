@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <script>
+        var count = 0;
+        function minus(){
+            if(count > 0){
+                count--;
+                document.getElementById("count").value = count;
+            }
+        }
+
+        function plus(){
+            count++;
+            document.getElementById("count").value = count;
+        }
+    </script>
+
+    <style> 
+        *{
+            text-align: center;
+        }
+        #count{
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QUANTITY BOX</h1>
+    <!-- use in "value" defualt value enter ..... -->
+    <button onclick="minus()"> - </button>
+    <input type="text" id="count" value="0" size="10" readonly>
+    <button onclick="plus()"> + </button>
+</body>
+</html>

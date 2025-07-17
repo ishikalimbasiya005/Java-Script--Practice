@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <script>
+        var s=0, m=1, h=1;
+
+        function second()
+        {
+            if(s==60)
+            {
+                s=0;
+                minutes()
+            }
+            document.getElementById("s").value = s;
+            s++;   
+        }
+
+        function minutes()
+        {
+            if(m==60)
+            {
+                m=0;
+                hours()
+            }
+            document.getElementById("m").value = m;
+            m++;
+        }
+
+        function hours()
+        {
+            if(h==24)
+            {
+                h=0;
+            }
+            document.getElementById("h").value = h;
+            h++;
+        }
+
+        setInterval(second,1000)
+    </script>
+
+    <style>
+        body{
+           background-color: rgb(125, 162, 173);
+           color: white;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Time:--</h1>
+    <input type="text"  id="h" size="5">:
+    <input type="text"  id="m" size="5">:
+    <input type="text"  id="s" size="5">:
+</body>
+</html>

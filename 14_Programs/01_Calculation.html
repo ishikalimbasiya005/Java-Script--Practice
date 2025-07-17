@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <style>
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            background-color: lightgreen
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            font-family: Arial, sans-serif;
+            background-color: lightpink;
+        }
+
+        .table {
+            margin-left: 40%;
+            margin-top: 4%;
+            border-color: black;
+            border-width: 5px;
+        }
+
+        button {
+            display: flex;
+            margin-left: 27%;
+            padding-left: 20px;
+            text-align: center;
+            padding-right: 30px;
+            background-color: darksalmon;
+        }
+
+        td {
+            display: block;
+            background-color: bisque;
+        }
+
+        #val1 ,#val2 , #ans{
+            display: block;
+            background-color: beige;
+        }
+    </style>
+
+    <script>
+
+        function sum() {
+            var val1 = document.getElementById("val1").value
+            var val2 = document.getElementById("val2").value
+
+            var ans = parseInt(val1) + parseInt(val2)
+            document.getElementById("ans").value = ans
+        }
+
+        function sub() {
+            var val1 = document.getElementById("val1").value
+            var val2 = document.getElementById("val2").value
+
+            var ans1 = parseInt(val1) - parseInt(val2)
+            document.getElementById("ans").value = ans1
+        }
+
+        function mul() {
+            var val1 = document.getElementById("val1").value
+            var val2 = document.getElementById("val2").value
+
+            var ans2 = parseInt(val1) * parseInt(val2)
+            document.getElementById("ans").value = ans2
+        }
+
+        function div() {
+            var val1 = document.getElementById("val1").value
+            var val2 = document.getElementById("val2").value
+
+            var ans3 = parseInt(val1) / parseInt(val2)
+            document.getElementById("ans").value = ans3
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculation :</h1>
+    <hr>
+    <div class="table">
+        <table border="1">
+            <tr>
+                <td>val1:</td>
+                <td><input type="text" id="val1"></td>
+            </tr>
+
+            <tr>
+                <td>val2:</td>
+                <td><input type="text" id="val2"></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="sum()"> SUM </button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="sub()"> SUB </button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="mul()"> MUL </button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="div()"> DIV </button></td>
+            </tr>
+
+            <tr>
+                <td>Ans:</td>
+                <td><input type="text" id="ans"></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

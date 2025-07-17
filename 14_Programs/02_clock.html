@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <script>
+        function test()
+        {
+            var h= document.getElementById('val').value
+
+            document.getElementById('h').value= h;
+            document.getElementById('m').value= h * 60;
+            document.getElementById('s').value= h * 3600;
+        }
+    </script>
+</head>
+<body>
+    <h1>Normal Clock:-</h1>
+    <input type="text" id="val">
+    <button onclick="test()">CLICK ME!</button>
+    <input type="text" id="h">
+    <input type="text" id="m">
+    <input type="text" id="s">
+</body>
+</html>

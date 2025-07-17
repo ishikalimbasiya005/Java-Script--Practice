@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph into Square</title>
+    <style>
+        #Paragraph {
+            display: none;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: rgb(9, 173, 227);
+        }
+        
+    </style>
+
+
+    <script>
+        let square=1;
+        function demo()
+        {
+            if(square == 1){
+                document.getElementById('Paragraph').style.display="block"
+                square=0;
+            }
+            else{
+                document.getElementById('Paragraph').style.display="none"
+                square=1;
+            }
+           
+        // document.getElementById("Paragraph").style.width="100px"
+        // document.getElementById("Paragraph").style.height="100px"
+        // document.getElementById("Paragraph").style.backgroundColor="pink";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Change into Square:-</h1>
+   <p id="Paragraph"></p>
+   <button onclick="demo()">Click Me!</button>
+</body>
+
+</html>

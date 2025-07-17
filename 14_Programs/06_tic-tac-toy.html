@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <style>
+        input {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .demo {
+            margin-left: 130px;
+        }
+
+        h1{
+            text-align: center;
+            color: rgb(81, 0, 255);
+        }
+    </style>
+
+    <script>
+        var button = 1;
+
+        function btn1() {
+            if (button == 1) {
+                document.getElementById("btn1").value = "X"
+                document.getElementById("btn1").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn1").value = "O"
+                document.getElementById("btn1").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn2() {
+            if (button == 1) {
+                document.getElementById("btn2").value = "X"
+                document.getElementById("btn2").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn2").value = "O"
+                document.getElementById("btn2").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn3() {
+            if (button == 1) {
+                document.getElementById("btn3").value = "X"
+                document.getElementById("btn3").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn3").value = "O"
+                document.getElementById("btn3").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn4() {
+            if (button == 1) {
+                document.getElementById("btn4").value = "X"
+                document.getElementById("btn4").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn4").value = "O"
+                document.getElementById("btn4").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn5() {
+            if (button == 1) {
+                document.getElementById("btn5").value = "X"
+                document.getElementById("btn5").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn5").value = "O"
+                document.getElementById("btn5").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn6() {
+            if (button == 1) {
+                document.getElementById("btn6").value = "X"
+                document.getElementById("btn6").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn6").value = "O"
+                document.getElementById("btn6").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn7() {
+            if (button == 1) {
+                document.getElementById("btn7").value = "X"
+                document.getElementById("btn7").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn7").value = "O"
+                document.getElementById("btn7").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn8() {
+            if (button == 1) {
+                document.getElementById("btn8").value = "X"
+                document.getElementById("btn8").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn8").value = "O"
+                document.getElementById("btn8").disabled = "true"
+                button = 1;
+            }
+        }
+
+        function btn9() {
+            if (button == 1) {
+                document.getElementById("btn9").value = "X"
+                document.getElementById("btn9").disabled = "true"
+                button = 0;
+            }
+            else {
+                document.getElementById("btn9").value = "O"
+                document.getElementById("btn9").disabled = "true"
+                button = 1;
+            }
+        }
+
+        // Resrt the game
+        function demo() {
+            location.reload()
+        }
+
+        function turn() {
+            var b1 = document.getElementById("btn1").value
+            var b2 = document.getElementById("btn2").value
+            var b3 = document.getElementById("btn3").value
+            var b4 = document.getElementById("btn4").value
+            var b5 = document.getElementById("btn5").value
+            var b6 = document.getElementById("btn6").value
+            var b7 = document.getElementById("btn7").value
+            var b8 = document.getElementById("btn8").value
+            var b9 = document.getElementById("btn9").value
+
+            if (b1 == "X" && b2 == "X" && b3 == "X") {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b4 == "X" && b5 == "X" && b6 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b7 == "X" && b8 == "X" && b9 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+            }
+            else if(b1 == "X" && b4 == "X" && b7 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b2 == "X" && b5 == "X" && b8 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b3 == "X" && b6 == "X" && b9 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+            }
+            else if(b1 == "X" && b5 == "X" && b9 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+            }
+            else if(b3 == "X" && b5 == "X" && b7 == "X")
+            {
+                document.getElementById("truns").innerHTML = "Player X is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+
+
+            else if (b1 == "O" && b2 == "O" && b3 == "O") {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b4 == "O" && b5 == "O" && b6 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b7 == "O" && b8 == "O" && b9 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+            }
+            else if(b1 == "O" && b4 == "O" && b7 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b2 == "O" && b5 == "O" && b8 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+            else if(b3 == "O" && b6 == "O" && b9 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn5").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+            }
+            else if(b1 == "O" && b5 == "O" && b9 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn3").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn7").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+            }
+            else if(b3 == "O" && b5 == "O" && b7 == "O")
+            {
+                document.getElementById("truns").innerHTML = "Player O is Win:"
+                document.getElementById("btn1").disabled = "true"
+                document.getElementById("btn2").disabled = "true"
+                document.getElementById("btn4").disabled = "true"
+                document.getElementById("btn6").disabled = "true"
+                document.getElementById("btn8").disabled = "true"
+                document.getElementById("btn9").disabled = "true"
+            }
+
+
+            else {
+                if (button == 1) {
+                    document.getElementById("truns").innerHTML = "Turn Is Player X:"
+                }
+                else {
+                    document.getElementById("truns").innerHTML = "Turn Is Player O:"
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+<h1>TIC-TAC TOY:-----</h1>
+<hr>
+    <table>
+        <tr>
+            <td><input type="button" id="btn1" onclick="btn1(); turn()"></td>
+            <td><input type="button" id="btn2" onclick="btn2(); turn()"></td>
+            <td><input type="button" id="btn3" onclick="btn3(); turn()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btn4" onclick="btn4(); turn()"></td>
+            <td><input type="button" id="btn5" onclick="btn5(); turn()"></td>
+            <td><input type="button" id="btn6" onclick="btn6(); turn()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btn7" onclick="btn7(); turn()"></td>
+            <td><input type="button" id="btn8" onclick="btn8(); turn()"></td>
+            <td><input type="button" id="btn9" onclick="btn9(); turn()"></td>
+        </tr>
+
+        <h2 id="truns"></h2>
+    </table>
+    <br><br>
+
+    <button type="button" class="demo" onclick="demo()">RESET</button>
+
+</body>
+</html>
