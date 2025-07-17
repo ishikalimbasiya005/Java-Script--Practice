@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+    <script>
+        function store() {
+            var fruit = document.getElementById("fruit").value;
+
+            localStorage.setItem("fruit", fruit);
+        }
+
+        function view() {
+            var fruit = localStorage.getItem("fruit");
+
+            document.getElementById("viewFruit").value = fruit || "";
+        }
+
+        function del() {
+            localStorage.removeItem("fruit");
+            alert("Items removed!");
+
+            // Optionally clear all items:
+            // localStorage.clear();
+        }
+    </script>
+</head>
+<body>
+    <h3>Store Items</h3>
+    Fruit: <input type="text" id="fruit"><br><br>
+    <button onclick="store()">Store</button>
+
+    <h3>View Items</h3>
+    Fruit: <input type="text" id="viewFruit" readonly><br><br>
+    <button onclick="view()">View</button>
+
+    <h3>Clear Storage</h3>
+    <button onclick="del()">Clear</button>
+</body>
+</html>
