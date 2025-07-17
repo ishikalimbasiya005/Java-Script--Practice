@@ -43,4 +43,13 @@ Pass an array to a function and access elements via index.
 
 ---
 
-✅ **Tip:** Prefer `const`/`let` over `var`, use arrow functions for simplicity, and avoid global pollution.
+## 🗂️ Local Storage (HTML5)
+Allows storing key-value pairs in the browser persistently.
+
+### ✅ Methods:
+- `localStorage.setItem("key", "value")` – Store data
+- `localStorage.getItem("key")` – Retrieve data
+- `localStorage.removeItem("key")` – Remove specific data
+- `localStorage.clear()` – Clear all data
+
+
